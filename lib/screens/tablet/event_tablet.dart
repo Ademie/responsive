@@ -13,7 +13,7 @@ class _EventTabletState extends State<EventTablet> {
     return const Scaffold(
       backgroundColor: Colors.blueGrey,
       body: Center(
-        child: Text('Event'),
+        child: Text('Event Tablet'),
       ),
       
     );

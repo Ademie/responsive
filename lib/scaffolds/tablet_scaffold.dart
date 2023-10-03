@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive/screens/tablet/create_tablet.dart';
 import 'package:responsive/screens/tablet/event_tablet.dart';
 import 'package:responsive/screens/tablet/home_tablet.dart';
 import 'package:side_navigation/side_navigation.dart';
@@ -14,9 +15,7 @@ class _TabletScaffoldState extends State<TabletScaffold> {
   List<Widget> views = const [
     HomeTablet(),
     EventTablet(),
-    Center(
-      child: Text('Settings'),
-    ),
+    CreateTablet()
   ];
 
   int selectedIndex = 0;
@@ -38,16 +37,16 @@ class _TabletScaffoldState extends State<TabletScaffold> {
                         )))),
             items: const [
               SideNavigationBarItem(
-                icon: Icons.dashboard,
-                label: 'Dashboard',
+                icon: Icons.home,
+                label: 'Home',
               ),
               SideNavigationBarItem(
-                icon: Icons.person,
-                label: 'Account',
+                icon: Icons.calendar_month,
+                label: 'Events',
               ),
               SideNavigationBarItem(
-                icon: Icons.settings,
-                label: 'Settings',
+                icon: Icons.circle_outlined,
+                label: 'Create',
               ),
             ],
             onTap: (index) {
