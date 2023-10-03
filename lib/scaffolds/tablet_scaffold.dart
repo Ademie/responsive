@@ -28,6 +28,7 @@ class _TabletScaffoldState extends State<TabletScaffold> {
         children: [
           SideNavigationBar(
             selectedIndex: selectedIndex,
+            
             footer: SideNavigationBarFooter(
                 label: TextButton(
                     onPressed: () {},
@@ -54,6 +55,8 @@ class _TabletScaffoldState extends State<TabletScaffold> {
                 selectedIndex = index;
               });
             },
+            
+            expandable: false,
           ),
           Expanded(
             child: views.elementAt(selectedIndex),
